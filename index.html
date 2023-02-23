@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <!-- styling -->
+    <link rel="icon" type="image/x-icon" href="asset/Revou-alasan.original.png">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+    <script>
+    function namePrompt(){
+        var p = prompt("Enter your name: ");
+        if(p != null){
+            document.getElementById('name').innerHTML = 'Hello' + " " + p;
+        }
+    }
+
+    </script>
+
+
+   <nav class = "navbar">
+ 
+    <a href="#" class = "navbar-logo">RevoU</a>
+    
+    <div class="navbar-nav">
+     <a href="#home">Home</a>
+     <a href = "/profile.html">Our Profile</a>
+     <a href = "#">Portofolio</a>
+     <a href = "#">Message Us</a>
+    </div>
+
+    <div class="navbar-extra">
+     <a href = "#" id = "menu"><i data-feather = "menu"></i></a>
+    </div>
+   </nav>
+
+
+   <section class = "hero" id = "home">
+    <main class = "content">
+        <div class="text">
+            <h1 id = "name">Hi, Welcome to RevoU.</h1>
+            <p>Join Indonesia's Largest Live Online Learning Community.</p>
+            <p>Recession Proof your Career by learning the most valuable digital skills from the Best in the Industry.</p>
+            <!-- <button><a href = "#" class = "cta">Join now</a></button> -->
+        </div>
+        
+        <div class="img">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/6ZXuEwLKi7U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+    </main>
+   </section>
+
+   <section class = "hq" id = "head">
+    <main class = content>
+        <div class="text">
+            <h1>Our Headquarters</h1>
+            <div class="images">
+                <img src="asset/jkt.jpg" alt="">
+                <img src="asset/bandung.jpg" alt="">
+                <img src="asset/sby.jpg" alt="">
+            </div>
+            <div class="caption">
+                <p>Jakarta</p>
+                <p>Bandung</p>
+                <p>Surabaya</p>
+            </div>
+        </div>
+    </main>
+   </section>
+
+   <section class = "form" id = "formulir">
+    <main class = "content">
+        <div class="column">
+            <div class="text">
+                <h1>Message Us</h1>
+            </div>
+            <div class="queries">
+                <p>Nama: </p>
+                <input type = "text" placeholder = "Nama" id = "userInput">
+                <h1 id = "message"> </h1>
+            </div>
+    
+            <div class="queries">
+                <p>Tanggal Lahir: </p>
+                <input type = "date"  id = "userDate">
+                <h1 id = "message"> </h1>
+            </div>
+    
+            <div class="queries" id = "genders">
+                <p id = "gender">Jenis Kelamin: </p>
+                <input type = "radio" id = "laki" value = "Laki-Laki">
+                <label for = "laki">Laki-Laki</label>
+                <input type = "radio" id = "perem" value = "Perempuan">
+                <label for = "perem">Perempuan</label>
+            </div>
+    
+            <div class="queries">
+                <p>Pesan: </p>
+                <input type = "textbox" width = "500px" placeholder="Pesan" id = "userPesan">
+            </div>
+            <div class="queries">
+                <button onclick = "myFunction()">Submit</button>
+            </div>
+        </div>
+
+       
+
+    </main>
+   </section>
+
+            <p id = "message"> </p>
+            <p id = "messageDate"> </p>
+            <p id = "gender"> </p>
+            <p id = "messagePesan"></p>
+
+
+   <script>
+    function myFunction(){
+        let userInput = document.querySelector('#userInput');
+        let message = document.querySelector('#message');
+        message.innerHTML = userInput.value;
+
+        let userDate = document.querySelector('#userDate');
+        let messageDate = document.querySelector('#messageDate');
+        messageDate.innerHTML = userDate.value;
+
+        if(document.getElementById("laki") === true){
+            let userGender = document.getElementById('#gender');
+            gender.innerHTML = "Laki-laki";
+        }else if(document.getElementById("perem") === true){
+            let userGender = document.getElementById('#gender');
+            gender.innerHTML = "Perempuan";
+        }
+
+        let userPesan = document.querySelector('#userPesan');
+        let messagePesan = document.querySelector('#messagePesan');
+        messagePesan.innerHTML = userPesan.value;
+
+    }
+   </script>
+
+
+    <script>
+        feather.replace()
+     </script>
+
+     <!-- js -->
+     <script src = "sjs/script.js"></script>
+</body>
+</html>
